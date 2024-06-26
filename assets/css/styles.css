@@ -1356,6 +1356,7 @@ a {
     color: #FFFFFF;
     background: #C31414;
     padding: 8px 8px 8px 20px;
+    cursor: pointer;
 }
 
 .ques__submit--icon {
