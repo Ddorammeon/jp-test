@@ -1696,9 +1696,12 @@ input:focus {
     font-weight: 400 !important;
     color: #FFFFFF !important;
     margin-top: -8px;
-    cursor: pointer;
     margin-bottom: 12px;
     margin-top: 8px;
+}
+
+.address1:last-child {
+    cursor: pointer;
 }
 
 .address2 {
