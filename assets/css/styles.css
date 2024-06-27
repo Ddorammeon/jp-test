@@ -1607,7 +1607,6 @@ a {
     align-items: center;
     gap: 12px;
     justify-content: center;
-    margin-bottom: 20px;
     border-bottom: 1px solid #FFFFFF;
 
 }
@@ -1621,6 +1620,10 @@ a {
 .footer__section .input-group img {
     color: #FFFFFF;
     /* font-size: 18px; */
+}
+
+.footer__submit {
+    margin-top: 20px;
 }
 
 .footer__section form input {
