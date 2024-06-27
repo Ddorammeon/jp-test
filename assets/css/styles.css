@@ -1348,6 +1348,11 @@ a {
     text-align: left;
 }
 
+.ques__submit--link {
+    display: block;
+    width: 146px;
+}
+
 .ques__submit {
     font-size: 1.8rem;
     font-weight: 700;

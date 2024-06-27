@@ -486,6 +486,10 @@
         min-width: 0px;
     }
 
+    .ques__submit--link {
+        width: 130px;
+    }
+
     .footer {
         border-radius: 0;
         padding: 0;
