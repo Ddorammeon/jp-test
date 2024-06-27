@@ -803,84 +803,6 @@ if ($_POST) {
       </section>
 
       <!-- Footer -->
-      <!-- <section class="footer">
-        <div class="main-content">
-            <div class="logo--block">
-                <a href="#!">
-                    <img src="./assets/img/logo2.svg" alt="" class="logo"/>
-                </a>
-                <div class="logo--content">
-                    <h2 class="logo__heading">
-                        Học viện Công nghệ Bưu chính Viễn thông
-                    </h2>
-                    <p class="logo__desc">
-                        Posts and Telecommunications Institute of Technology
-                    </p>
-                </div>
-            </div>
-            <div class="footer__content">
-                <ul class="footer__address">
-                    <li class="footer__item">
-                        <h3>Trung tâm Đào tạo Quốc tế</h3>
-                    </li>
-                    <li class="footer__item">
-                        <img
-                                src="./assets/img/footer-icon1.svg"
-                                alt=""
-                                class="footer__icon"
-                        />
-                        <p>
-                            Tầng 5, Toà nhà A1,<br class="show-on-mobile"/>
-                            Học viện Công nghệ Bưu chính Viễn thông <br/>
-                            96A Trần Phú, Quận Hà Đông, Hà Nội
-                        </p>
-                    </li>
-                    <div>
-                        <li class="footer__item">
-                            <img
-                                    src="./assets/img/footer-icon2.svg"
-                                    alt=""
-                                    class="footer__icon"
-                            />
-                            <p>088.616.0606</p>
-                        </li>
-                        <li class="footer__item">
-                            <img
-                                    src="./assets/img/footer-icon3.svg"
-                                    alt=""
-                                    class="footer__icon"
-                            />
-                            <p>cie@ptit.edu.vn</p>
-                        </li>
-                    </div>
-                </ul>
-
-                <div class="footer__follow">
-                    <p>Theo dõi trên mạng xã hội</p>
-                    <div class="footer__social">
-                        <a
-                                target="_blank"
-                                rel="noopenner"
-                                href="https://www.facebook.com/ptit.cie"
-                        ><img src="./assets/img/facebook.svg" alt=""
-                            /></a>
-                        <a
-                                target="_blank"
-                                rel="noopenner"
-                                href="https://www.youtube.com/@CIEPTIT"
-                        ><img src="./assets/img/youtube.svg" alt=""
-                            /></a>
-                        <a
-                                target="_blank"
-                                rel="noopenner"
-                                href="https://www.linkedin.com/company/cie-ptit/"
-                        ><img src="./assets/img/Linkedin.svg" alt=""
-                            /></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
       <footer class="footer">
         <div class="footer__overlay footer__overlay--1"></div>
@@ -988,6 +910,7 @@ if ($_POST) {
                   <img src="./assets/img/sms1.png" alt="địa chỉ" />
                   <input
                     type="email"
+                    id="user_email"
                     name="user_email"
                     placeholder="メールアドレス"
                     required
@@ -998,6 +921,8 @@ if ($_POST) {
                     type="submit"
                     name="action"
                     value="Submit Email"
+                    disabled
+                    id="submitBtn"
                     class="hide-on-mobile"
                   >
                     <p class="hide-on-mobile">すぐ登録</p>
@@ -1018,6 +943,8 @@ if ($_POST) {
                   </button>
                 </div>
               </form>
+
+              <span id="emailHelp" class="help-text"></span>
             </div>
           </div>
 
@@ -1032,6 +959,43 @@ if ($_POST) {
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
+
+    <!-- // footer--validate -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const emailInput = document.getElementById("user_email");
+        const submitBtn = document.getElementById("submitBtn");
+        const emailHelp = document.getElementById("emailHelp");
+
+        emailInput.addEventListener("input", function () {
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+          if (emailInput.value === "") {
+            emailHelp.textContent = "";
+            submitBtn.disabled = true;
+          } else if (!emailPattern.test(emailInput.value)) {
+            emailHelp.textContent = "無効な電子メール";
+            submitBtn.disabled = true;
+          } else {
+            emailHelp.textContent = "";
+            submitBtn.disabled = false;
+          }
+        });
+
+        document
+          .getElementById("emailForm")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            if (!submitBtn.disabled && emailPattern.test(emailInput.value)) {
+              // Perform actions upon valid submission
+              console.log("Email submitted:", emailInput.value);
+            } else {
+              emailHelp.textContent = "無効な電子メール";
+            }
+          });
+      });
+    </script>
 
     <!-- click text copy -->
     <script>

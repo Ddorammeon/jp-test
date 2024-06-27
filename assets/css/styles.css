@@ -1614,6 +1614,7 @@ a {
 
 .footer__section .input-group input:focus {
     outline: none;
+    background-color: transparent;
     /* Ensure focus outline is removed */
 }
 
@@ -1685,9 +1686,6 @@ input::placeholder {
 
 }
 
-input:focus {
-    background-color: transparent;
-}
 
 .footer__section p {
     font-size: 1.4rem;
