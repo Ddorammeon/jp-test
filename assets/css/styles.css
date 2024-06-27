@@ -1034,11 +1034,11 @@ a {
     position: relative;
     background: #C31414;
     align-items: flex-end;
+    background-image: url(../img/sale-bg.svg);
+    background-repeat: no-repeat;
 }
 
-.sale .main-content {
-    background-image: url(../img/sale-bg.svg);
-}
+.sale .main-content {}
 
 .sale__img {
     width: 423px;
@@ -1310,6 +1310,26 @@ a {
     padding: 12px 16px;
     background: #FFF5F5;
     width: max-content;
+}
+
+.ques__img--content1 {
+    top: 0;
+    left: 0;
+}
+
+.ques__img--content2 {
+    top: 53px;
+    left: 0;
+}
+
+.ques__img--content3 {
+    top: 0;
+    right: 0;
+}
+
+.ques__img--content4 {
+    top: 53px;
+    right: 0;
 }
 
 .ques--content__heading {

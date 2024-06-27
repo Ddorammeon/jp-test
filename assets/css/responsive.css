@@ -466,6 +466,19 @@
         height: 206px;
     }
 
+    .ques__img--content {
+        font-size: 0.9rem;
+        font-weight: 600;
+        line-height: 1.23rem;
+        text-align: left;
+        padding: 4px 8px;
+    }
+
+    .ques__img--content2,
+    .ques__img--content4 {
+        top: 27px;
+    }
+
     .ques--content__heading {
         font-size: 2.8rem;
         line-height: 3.82rem;
@@ -545,6 +558,21 @@
         border: 1px solid #fff;
         border-radius: 40px;
         padding: 0 16px;
+        width: 80%;
+        margin-bottom: 12px;
+    }
+
+    #emailForm {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .footer__section .input-group {
+        border: 1px solid #fff;
+        border-radius: 40px;
+        padding: 0 16px;
         width: 100%;
     }
 
@@ -560,14 +588,6 @@
 
     .footer__section form button svg path {
         fill: white;
-    }
-
-    #emailForm {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 12px;
-        flex-direction: row;
     }
 
     .footer__logo {
