@@ -1035,7 +1035,6 @@ a {
     background: #C31414;
     align-items: flex-end;
     background-image: url(../img/sale-bg.svg);
-    background-repeat: no-repeat;
 }
 
 .sale .main-content {}

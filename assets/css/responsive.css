@@ -332,6 +332,7 @@
 
     .sale {
         flex-direction: column;
+        background-repeat: no-repeat;
     }
 
     .sale .main-content {
