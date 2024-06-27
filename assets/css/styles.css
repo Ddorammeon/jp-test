@@ -1156,6 +1156,10 @@ a {
     padding: 0 45.25px;
 }
 
+.object__item:nth-child(3) {
+    width: 23.3%;
+}
+
 .object__item img {
     margin-bottom: 16px;
 }
